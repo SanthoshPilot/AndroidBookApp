@@ -1,0 +1,68 @@
+<h1 class="h1">Android Hide Title Bar and Full Screen Example</h1>
+<p>In this example, we are going to explain how to hide the title bar and how to display content in full screen mode.</p>
+<p>The&nbsp;<strong>requestWindowFeature(Window.FEATURE_NO_TITLE)&nbsp;</strong>method of Activity must be called to hide the title. But, it must be coded before the setContentView method.</p>
+<h3 class="h3">Code that hides title bar of activity</h3>
+<p>The&nbsp;<strong>getSupportActionBar()</strong>&nbsp;method is used to retrieve the instance of ActionBar class. Calling the hide() method of ActionBar class hides the title bar.</p>
+<ol class="dp-j" start="1">
+<li class="alt">requestWindowFeature(Window.FEATURE_NO_TITLE);<span class="comment">//will&nbsp;hide&nbsp;the&nbsp;title&nbsp;</span>&nbsp;&nbsp;</li>
+<li class="">getSupportActionBar().hide();&nbsp;<span class="comment">//hide&nbsp;the&nbsp;title&nbsp;bar</span>&nbsp;</li>
+</ol>
+<h3 class="h3">Code that enables full screen mode of activity</h3>
+<p>The&nbsp;<strong>setFlags()</strong>&nbsp;method of Window class is used to display content in full screen mode. You need to pass the&nbsp;<strong>WindowManager.LayoutParams.FLAG_FULLSCREEN</strong>&nbsp;constant in the setFlags method.</p>
+<ol class="dp-j" start="1">
+<li class="alt"><span class="keyword">this</span>.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WindowManager.LayoutParams.FLAG_FULLSCREEN);&nbsp;<span class="comment">//show&nbsp;the&nbsp;activity&nbsp;in&nbsp;full&nbsp;screen</span></li>
+</ol>
+<h3 class="h3">Android Hide Title Bar and Full Screen Example</h3>
+<p>Let's see the full code to hide the title bar in android.</p>
+<h4 class="h4">activity_main.xml</h4>
+<p>&nbsp;File: activity_main.xml</p>
+<ol class="dp-xml" start="1">
+<li class="alt"><span class="tag">&lt;?</span><span class="tag-name">xml</span>&nbsp;<span class="attribute">version</span>=<span class="attribute-value">"1.0"</span>&nbsp;<span class="attribute">encoding</span>=<span class="attribute-value">"utf-8"</span><span class="tag">?&gt;</span>&nbsp;&nbsp;</li>
+<li class=""><span class="tag">&lt;</span><span class="tag-name">android.support.constraint.ConstraintLayout</span>&nbsp;<span class="attribute">xmlns:android</span>=<span class="attribute-value">"http://schemas.android.com/apk/res/android"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">xmlns:app</span>=<span class="attribute-value">"http://schemas.android.com/apk/res-auto"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">xmlns:tools</span>=<span class="attribute-value">"http://schemas.android.com/tools"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_width</span>=<span class="attribute-value">"match_parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_height</span>=<span class="attribute-value">"match_parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">tools:context</span>=<span class="attribute-value">"first.javatpoint.com.hidetitlebar.MainActivity"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">TextView</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_width</span>=<span class="attribute-value">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_height</span>=<span class="attribute-value">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:text</span>=<span class="attribute-value">"Hello&nbsp;World!"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintBottom_toBottomOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintLeft_toLeftOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintRight_toRightOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintTop_toTopOf</span>=<span class="attribute-value">"parent"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class=""><span class="tag">&lt;/</span><span class="tag-name">android.support.constraint.ConstraintLayout</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+</ol>
+<h4 class="h4">Activity class</h4>
+<div class="filename">File: MainActivity.java</div>
+<div class="filename">
+<ol class="dp-j" start="1">
+<li class="alt"><span class="keyword">package</span>&nbsp;first.javatpoint.com.hidetitlebar;&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt"><span class="keyword">import</span>&nbsp;android.support.v7.app.AppCompatActivity;&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">import</span>&nbsp;android.os.Bundle;&nbsp;&nbsp;</li>
+<li class="alt"><span class="keyword">import</span>&nbsp;android.view.Window;&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">import</span>&nbsp;android.view.WindowManager;&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">public</span>&nbsp;<span class="keyword">class</span>&nbsp;MainActivity&nbsp;<span class="keyword">extends</span>&nbsp;AppCompatActivity&nbsp;{&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@Override</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">protected</span>&nbsp;<span class="keyword">void</span>&nbsp;onCreate(Bundle&nbsp;savedInstanceState)&nbsp;{&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">super</span>.onCreate(savedInstanceState);&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requestWindowFeature(Window.FEATURE_NO_TITLE);&nbsp;<span class="comment">//will&nbsp;hide&nbsp;the&nbsp;title&nbsp;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getSupportActionBar().hide();&nbsp;<span class="comment">//&nbsp;hide&nbsp;the&nbsp;title&nbsp;bar</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">this</span>.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WindowManager.LayoutParams.FLAG_FULLSCREEN);&nbsp;<span class="comment">//enable&nbsp;full&nbsp;screen</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity_main);&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</li>
+<li class="alt">}&nbsp;&nbsp;</li>
+</ol>
+<h4 class="h4">Output: Hiding the Title Only</h4>
+<p><img src="https://static.javatpoint.com/androidpages/images/hidetitlebar1.png" alt="android hide title bar example output 1" /></p>
+<h4 class="h4">Output: Hiding the TitleBar and enabling FullScreen</h4>
+<p><img src="https://static.javatpoint.com/androidpages/images/hidetitlebar2.png" alt="android hide title bar example output 2" /></p>
+</div>

@@ -1,0 +1,58 @@
+<h1 id="h1">AndroidManifest.xml file in android</h1>
+<p>The&nbsp;<strong>AndroidManifest.xml file</strong>&nbsp;<em>contains information of your package</em>, including components of the application such as activities, services, broadcast receivers, content providers etc.</p>
+<p>It performs some other tasks also:</p>
+<ul>
+<li>It is&nbsp;<strong>responsible to protect the application</strong>&nbsp;to access any protected parts by providing the permissions.</li>
+<li>It also&nbsp;<strong>declares the android api</strong>&nbsp;that the application is going to use.</li>
+<li>It&nbsp;<strong>lists the instrumentation classes</strong>. The instrumentation classes provides profiling and other informations. These informations are removed just before the application is published etc.</li>
+</ul>
+<p>This is the required xml file for all the android application and located inside the root directory.</p>
+<p>A simple AndroidManifest.xml file looks like this:</p>
+<ol class="dp-xml" start="1">
+<li class="alt"><span class="tag">&lt;</span><span class="tag-name">manifest</span>&nbsp;<span class="attribute">xmlns:android</span>=<span class="attribute-value">"http://schemas.android.com/apk/res/android"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">package</span>=<span class="attribute-value">"com.javatpoint.hello"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:versionCode</span>=<span class="attribute-value">"1"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:versionName</span>=<span class="attribute-value">"1.0"</span>&nbsp;<span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">uses-sdk</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:minSdkVersion</span>=<span class="attribute-value">"8"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:targetSdkVersion</span>=<span class="attribute-value">"15"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">application</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:icon</span>=<span class="attribute-value">"@drawable/ic_launcher"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:label</span>=<span class="attribute-value">"@string/app_name"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:theme</span>=<span class="attribute-value">"@style/AppTheme"</span>&nbsp;<span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">activity</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">".MainActivity"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:label</span>=<span class="attribute-value">"@string/title_activity_main"</span>&nbsp;<span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">intent-filter</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">action</span>&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">"android.intent.action.MAIN"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">category</span>&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">"android.intent.category.LAUNCHER"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">intent-filter</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">activity</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">application</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt"><span class="tag">&lt;/</span><span class="tag-name">manifest</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+</ol>
+<p>--------------------------------------------------------------------------</p>
+<h2 class="h2">Elements of the AndroidManifest.xml file</h2>
+<p>The elements used in the above xml file are described below.</p>
+<h4 class="h4">&lt;manifest&gt;</h4>
+<p><strong>manifest</strong>&nbsp;is the root element of the AndroidManifest.xml file. It has&nbsp;<strong>package</strong>&nbsp;attribute that describes the package name of the activity class.</p>
+<h4 class="h4">&lt;application&gt;</h4>
+<p><strong>application</strong>&nbsp;is the subelement of the manifest. It includes the namespace declaration. This element contains several subelements that declares the application component such as activity etc.</p>
+<p>The commonly used attributes are of this element are&nbsp;<strong>icon</strong>,&nbsp;<strong>label</strong>,&nbsp;<strong>theme</strong>&nbsp;etc.</p>
+<p><strong>android:icon</strong>&nbsp;represents the icon for all the android application components.</p>
+<p><strong>android:label</strong>&nbsp;works as the default label for all the application components.</p>
+<p><strong>android:theme</strong>&nbsp;represents a common theme for all the android activities.</p>
+<h4 class="h4">&lt;activity&gt;</h4>
+<p><strong>activity</strong>&nbsp;is the subelement of application and represents an activity that must be defined in the AndroidManifest.xml file. It has many attributes such as label, name, theme, launchMode etc.</p>
+<p><strong>android:label</strong>&nbsp;represents a label i.e. displayed on the screen.</p>
+<p><strong>android:name</strong>&nbsp;represents a name for the activity class. It is required attribute.</p>
+<h4 class="h4">&lt;intent-filter&gt;</h4>
+<p><strong>intent-filter</strong>&nbsp;is the sub-element of activity that describes the type of intent to which activity, service or broadcast receiver can respond to.</p>
+<h4 class="h4">&lt;action&gt;</h4>
+<p>It adds an action for the intent-filter. The intent-filter must have at least one action element.</p>
+<h4 class="h4">&lt;category&gt;</h4>
+<p>It adds a category name to an intent-filter.</p>

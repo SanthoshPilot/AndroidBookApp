@@ -1,0 +1,233 @@
+<h1 class="h1">Android Screen Orientation Example</h1>
+<p>The&nbsp;<strong>screenOrientation</strong>&nbsp;is the attribute of activity element. The orientation of android activity can be portrait, landscape, sensor, unspecified etc. You need to define it in the AndroidManifest.xml file.</p>
+<p><strong>Syntax:</strong>&nbsp;</p>
+<div class="codeblock">
+<div class="dp-highlighter">
+<ol class="dp-xml" start="1">
+<li class="alt"><span class="tag">&lt;</span><span class="tag-name">activity</span>&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">"package_name.Your_ActivityName"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:screenOrientation</span>=<span class="attribute-value">"o<span class="attribute">rientation</span>_type"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt"><span class="tag">&lt;/</span><span class="tag-name">activity</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+</ol>
+</div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="codeblock">
+<div class="dp-highlighter">
+<ol class="dp-xml" start="1">
+<li class="alt"><span class="tag">&lt;</span><span class="tag-name">activity</span>&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">"&nbsp;example.javatpoint.com.screenorientation.MainActivity"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:screenOrientation</span>=<span class="attribute-value">"portrait"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt"><span class="tag">&lt;/</span><span class="tag-name">activity</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+</ol>
+</div>
+</div>
+<div class="codeblock">
+<div class="dp-highlighter">
+<div class="bar">&nbsp;</div>
+<ol class="dp-xml" start="1">
+<li class="alt"><span class="tag">&lt;</span><span class="tag-name">activity</span>&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">".SecondActivity"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:screenOrientation</span>=<span class="attribute-value">"landscape"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt"><span class="tag">&lt;/</span><span class="tag-name">activity</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+</ol>
+<p>The common values for screenOrientation attribute are as follows:</p>
+<table class="alt">
+<tbody>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>unspecified</td>
+<td>It is the default value. In such case, system chooses the orientation.</td>
+</tr>
+<tr>
+<td>portrait</td>
+<td>taller not wider</td>
+</tr>
+<tr>
+<td>landscape</td>
+<td>wider not taller</td>
+</tr>
+<tr>
+<td>sensor</td>
+<td>orientation is determined by the device orientation sensor.</td>
+</tr>
+</tbody>
+</table>
+<h2 class="h2">Android Portrait and Landscape mode screen orientation example</h2>
+<p>In this example, we will create two activities of different screen orientation. The first activity (MainActivity) will be as "portrait" orientation and second activity (SecondActivity) as "landscape" orientation type.</p>
+<h4 class="h4"><span style="color: #000000;">activity_main.xml</span></h4>
+<div id="filename"><span style="color: #ff0000;">File: activity_main.xml</span></div>
+<div class="codeblock">
+<div class="dp-highlighter">
+<div class="bar">&nbsp;</div>
+<ol class="dp-xml" start="1">
+<li class="alt"><span class="tag">&lt;?</span><span class="tag-name">xml</span>&nbsp;<span class="attribute">version</span>=<span class="attribute-value">"1.0"</span>&nbsp;<span class="attribute">encoding</span>=<span class="attribute-value">"utf-8"</span><span class="tag">?&gt;</span>&nbsp;&nbsp;</li>
+<li class=""><span class="tag">&lt;</span><span class="tag-name">android.support.constraint.ConstraintLayout</span>&nbsp;<span class="attribute">xmlns:android</span>=<span class="attribute-value">"http://schemas.android.com/apk/res/android"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">xmlns:app</span>=<span class="attribute-value">"http://schemas.android.com/apk/res-auto"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">xmlns:tools</span>=<span class="attribute-value">"http://schemas.android.com/tools"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_width</span>=<span class="attribute-value">"match_parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_height</span>=<span class="attribute-value">"match_parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">tools:context</span>=<span class="attribute-value">"example.javatpoint.com.screenorientation.MainActivity"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">Button</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:id</span>=<span class="attribute-value">"@+id/button1"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_width</span>=<span class="attribute-value">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_height</span>=<span class="attribute-value">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_marginBottom</span>=<span class="attribute-value">"8dp"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_marginTop</span>=<span class="attribute-value">"112dp"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:onClick</span>=<span class="attribute-value">"onClick"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:text</span>=<span class="attribute-value">"Launch&nbsp;next&nbsp;activity"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintBottom_toBottomOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintEnd_toEndOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintHorizontal_bias</span>=<span class="attribute-value">"0.612"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintStart_toStartOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintTop_toBottomOf</span>=<span class="attribute-value">"@+id/editText1"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintVertical_bias</span>=<span class="attribute-value">"0.613"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">TextView</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:id</span>=<span class="attribute-value">"@+id/editText1"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_width</span>=<span class="attribute-value">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_height</span>=<span class="attribute-value">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_centerHorizontal</span>=<span class="attribute-value">"true"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_marginEnd</span>=<span class="attribute-value">"8dp"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_marginStart</span>=<span class="attribute-value">"8dp"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_marginTop</span>=<span class="attribute-value">"124dp"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:ems</span>=<span class="attribute-value">"10"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:textSize</span>=<span class="attribute-value">"22dp"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:text</span>=<span class="attribute-value">"This&nbsp;activity&nbsp;is&nbsp;portrait&nbsp;orientation"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintEnd_toEndOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintHorizontal_bias</span>=<span class="attribute-value">"0.502"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintStart_toStartOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintTop_toTopOf</span>=<span class="attribute-value">"parent"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class=""><span class="tag">&lt;/</span><span class="tag-name">android.support.constraint.ConstraintLayout</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+</ol>
+</div>
+</div>
+<hr />
+<h4 class="h4">Activity class</h4>
+<div class="filename"><span style="color: #ff0000;">File: MainActivity.java</span></div>
+<div class="codeblock">
+<div class="dp-highlighter">
+<div class="bar">&nbsp;</div>
+<ol class="dp-j" start="1">
+<li class="alt"><span class="keyword">package</span>&nbsp;example.javatpoint.com.screenorientation;&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt"><span class="keyword">import</span>&nbsp;android.content.Intent;&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">import</span>&nbsp;android.support.v7.app.AppCompatActivity;&nbsp;&nbsp;</li>
+<li class="alt"><span class="keyword">import</span>&nbsp;android.os.Bundle;&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">import</span>&nbsp;android.view.View;&nbsp;&nbsp;</li>
+<li class="alt"><span class="keyword">import</span>&nbsp;android.widget.Button;&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt"><span class="keyword">public</span>&nbsp;<span class="keyword">class</span>&nbsp;MainActivity&nbsp;<span class="keyword">extends</span>&nbsp;AppCompatActivity&nbsp;{&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;Button&nbsp;button1;&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@Override</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">protected</span>&nbsp;<span class="keyword">void</span>&nbsp;onCreate(Bundle&nbsp;savedInstanceState)&nbsp;{&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">super</span>.onCreate(savedInstanceState);&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity_main);&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;button1=(Button)findViewById(R.id.button1);&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span>&nbsp;<span class="keyword">void</span>&nbsp;onClick(View&nbsp;v)&nbsp;{&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Intent&nbsp;intent&nbsp;=&nbsp;<span class="keyword">new</span>&nbsp;Intent(MainActivity.<span class="keyword">this</span>,SecondActivity.<span class="keyword">class</span>);&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startActivity(intent);&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</li>
+<li class="alt">}&nbsp;&nbsp;</li>
+</ol>
+</div>
+</div>
+<h4 class="h4">activity_second.xml</h4>
+<div class="filename"><span style="color: #ff0000;">File: activity_second.xml</span></div>
+<div class="codeblock">
+<div class="dp-highlighter">
+<div class="bar">&nbsp;</div>
+<ol class="dp-xml" start="1">
+<li class="alt"><span class="tag">&lt;?</span><span class="tag-name">xml</span>&nbsp;<span class="attribute">version</span>=<span class="attribute-value">"1.0"</span>&nbsp;<span class="attribute">encoding</span>=<span class="attribute-value">"utf-8"</span><span class="tag">?&gt;</span>&nbsp;&nbsp;</li>
+<li class=""><span class="tag">&lt;</span><span class="tag-name">android.support.constraint.ConstraintLayout</span>&nbsp;<span class="attribute">xmlns:android</span>=<span class="attribute-value">"http://schemas.android.com/apk/res/android"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">xmlns:app</span>=<span class="attribute-value">"http://schemas.android.com/apk/res-auto"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">xmlns:tools</span>=<span class="attribute-value">"http://schemas.android.com/tools"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_width</span>=<span class="attribute-value">"match_parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_height</span>=<span class="attribute-value">"match_parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">tools:context</span>=<span class="attribute-value">"example.javatpoint.com.screenorientation.SecondActivity"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">TextView</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:id</span>=<span class="attribute-value">"@+id/textView"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_width</span>=<span class="attribute-value">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_height</span>=<span class="attribute-value">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_marginEnd</span>=<span class="attribute-value">"8dp"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_marginStart</span>=<span class="attribute-value">"8dp"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:layout_marginTop</span>=<span class="attribute-value">"180dp"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:text</span>=<span class="attribute-value">"this&nbsp;is&nbsp;landscape&nbsp;orientation"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:textSize</span>=<span class="attribute-value">"22dp"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintEnd_toEndOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintHorizontal_bias</span>=<span class="attribute-value">"0.502"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintStart_toStartOf</span>=<span class="attribute-value">"parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">app:layout_constraintTop_toTopOf</span>=<span class="attribute-value">"parent"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class=""><span class="tag">&lt;/</span><span class="tag-name">android.support.constraint.ConstraintLayout</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+</ol>
+</div>
+</div>
+<h4 class="h4">SecondActivity class</h4>
+<div class="filename"><span style="color: #ff0000;">File: SecondActivity.java</span></div>
+<div class="codeblock">
+<div class="dp-highlighter">
+<div class="bar">&nbsp;</div>
+<ol class="dp-j" start="1">
+<li class="alt"><span class="keyword">package</span>&nbsp;example.javatpoint.com.screenorientation;&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt"><span class="keyword">import</span>&nbsp;android.support.v7.app.AppCompatActivity;&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">import</span>&nbsp;android.os.Bundle;&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">public</span>&nbsp;<span class="keyword">class</span>&nbsp;SecondActivity&nbsp;<span class="keyword">extends</span>&nbsp;AppCompatActivity&nbsp;{&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@Override</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">protected</span>&nbsp;<span class="keyword">void</span>&nbsp;onCreate(Bundle&nbsp;savedInstanceState)&nbsp;{&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">super</span>.onCreate(savedInstanceState);&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity_second);&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</li>
+<li class="">}&nbsp;&nbsp;</li>
+</ol>
+</div>
+</div>
+<h4 class="h4">AndroidManifest.xml</h4>
+<div class="filename"><span style="color: #ff0000;">File: AndroidManifest.xml</span></div>
+<p>In AndroidManifest.xml file add the screenOrientation attribute in activity and provides its orientation. In this example, we provide "portrait" orientation for MainActivity and "landscape" for SecondActivity.</p>
+<div class="codeblock">
+<div class="dp-highlighter">
+<div class="bar">&nbsp;</div>
+<ol class="dp-xml" start="1">
+<li class="alt"><span class="tag">&lt;?</span><span class="tag-name">xml</span>&nbsp;<span class="attribute">version</span>=<span class="attribute-value">"1.0"</span>&nbsp;<span class="attribute">encoding</span>=<span class="attribute-value">"utf-8"</span><span class="tag">?&gt;</span>&nbsp;&nbsp;</li>
+<li class=""><span class="tag">&lt;</span><span class="tag-name">manifest</span>&nbsp;<span class="attribute">xmlns:android</span>=<span class="attribute-value">"http://schemas.android.com/apk/res/android"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">package</span>=<span class="attribute-value">"example.javatpoint.com.screenorientation"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">application</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:allowBackup</span>=<span class="attribute-value">"true"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:icon</span>=<span class="attribute-value">"@mipmap/ic_launcher"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:label</span>=<span class="attribute-value">"@string/app_name"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:roundIcon</span>=<span class="attribute-value">"@mipmap/ic_launcher_round"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:supportsRtl</span>=<span class="attribute-value">"true"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:theme</span>=<span class="attribute-value">"@style/AppTheme"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">activity</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">"example.javatpoint.com.screenorientation.MainActivity"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:screenOrientation</span>=<span class="attribute-value">"portrait"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">intent-filter</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">action</span>&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">"android.intent.action.MAIN"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">category</span>&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">"android.intent.category.LAUNCHER"</span>&nbsp;<span class="tag">/&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">intent-filter</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">activity</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">activity</span>&nbsp;<span class="attribute">android:name</span>=<span class="attribute-value">".SecondActivity"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">android:screenOrientation</span>=<span class="attribute-value">"landscape"</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">activity</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">application</span><span class="tag">&gt;</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class=""><span class="tag">&lt;/</span><span class="tag-name">manifest</span><span class="tag">&gt;</span></li>
+</ol>
+<h4 class="h4">Output:</h4>
+<p><span class="tag"><img src="https://static.javatpoint.com/androidpages/images/screenorientation1.png" alt="android screen orientation example output 1" />&nbsp;<img src="https://static.javatpoint.com/androidpages/images/screenorientation2.png" alt="android screen orientation example output 2" /></span></p>
+</div>
+</div>
+</div>
+</div>

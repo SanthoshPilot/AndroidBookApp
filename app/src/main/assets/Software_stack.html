@@ -1,0 +1,26 @@
+<h1 class="h1">Android Architecture</h1>
+<p><strong>android architecture</strong>&nbsp;or&nbsp;<strong>Android software stack</strong>&nbsp;is categorized into five parts:</p>
+<ol>
+<li>linux kernel</li>
+<li>native libraries (middleware),</li>
+<li>Android Runtime</li>
+<li>Application Framework</li>
+<li>Applications</li>
+</ol>
+<p>Let's see the android architecture first.</p>
+<p><img src="https://static.javatpoint.com/images/androidimages/softwarestack.jpg" alt="android software stack, architecture" /></p>
+<h2 class="h2">1) Linux kernel</h2>
+<p>It is the heart of android architecture that exists at the root of android architecture.&nbsp;<strong>Linux kernel</strong>&nbsp;is responsible for device drivers, power management, memory management, device management and resource access.</p>
+<hr />
+<h2 class="h2">2) Native Libraries</h2>
+<p>On the top of linux kernel, their are&nbsp;<strong>Native libraries</strong>&nbsp;such as WebKit, OpenGL, FreeType, SQLite, Media, C runtime library (libc) etc.</p>
+<p>The WebKit library is responsible for browser support, SQLite is for database, FreeType for font support, Media for playing and recording audio and video formats.</p>
+<hr />
+<h2 class="h2">3) Android Runtime</h2>
+<p>In android runtime, there are core libraries and DVM (Dalvik Virtual Machine) which is responsible to run android application. DVM is like JVM but it is optimized for mobile devices. It consumes less memory and provides fast performance.</p>
+<hr />
+<h2 class="h2">4) Android Framework</h2>
+<p>On the top of Native libraries and android runtime, there is android framework. Android framework includes&nbsp;<strong>Android API's</strong>&nbsp;such as UI (User Interface), telephony, resources, locations, Content Providers (data) and package managers. It provides a lot of classes and interfaces for android application development.</p>
+<hr />
+<h2 class="h2">5) Applications</h2>
+<p>On the top of android framework, there are applications. All applications such as home, contact, settings, games, browsers are using android framework that uses android runtime and libraries. Android runtime and native libraries are using linux kernal.</p>

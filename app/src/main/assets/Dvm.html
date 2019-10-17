@@ -1,0 +1,10 @@
+<h1 class="h1">Dalvik Virtual Machine | DVM</h1>
+<p>As we know the modern JVM is high performance and provides excellent memory management. But it needs to be optimized for low-powered handheld devices as well.</p>
+<p>The&nbsp;<strong>Dalvik Virtual Machine (DVM)</strong>&nbsp;is an android virtual machine optimized for mobile devices. It optimizes the virtual machine for&nbsp;<em>memory</em>,&nbsp;<em>battery life</em>&nbsp;and&nbsp;<em>performance</em>.</p>
+<p>Dalvik is a name of a town in Iceland. The Dalvik VM was written by <strong>Dan Bornstein</strong>.</p>
+<p>The Dex compiler converts the class files into the .dex file that run on the Dalvik VM. Multiple class files are converted into one dex file.</p>
+<p>Let's see the compiling and packaging process from the source file:</p>
+<p><img src="https://static.javatpoint.com/images/androidimages/flow.jpg" alt="Dalvik Virtual Machine Flow" /></p>
+<p>The&nbsp;<strong>javac tool</strong>&nbsp;compiles the java source file into the class file.</p>
+<p>The&nbsp;<strong>dx tool</strong>&nbsp;takes all the class files of your application and generates a single .dex file. It is a platform-specific tool.</p>
+<p>The&nbsp;<strong>Android Assets Packaging Tool (aapt)</strong>&nbsp;handles the packaging process.</p>

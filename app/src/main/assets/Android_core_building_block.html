@@ -1,0 +1,40 @@
+<h1 class="h1">Android Core Building Blocks</h1>
+<p>An android&nbsp;<strong>component</strong>&nbsp;is simply a piece of code that has a well defined life cycle e.g. Activity, Receiver, Service etc.</p>
+<p>The&nbsp;<strong>core building blocks</strong>&nbsp;or&nbsp;<strong>fundamental components</strong>&nbsp;of android are activities, views, intents, services, content providers, fragments and AndroidManifest.xml.</p>
+<p><img src="https://static.javatpoint.com/images/androidimages/componentsandroid.jpg" alt="android components" width="260" height="256" /></p>
+<h4 class="h4">Activity</h4>
+<p>An activity is a class that represents a single screen. It is like a Frame in AWT.</p>
+<h4 class="h4">View</h4>
+<p>A view is the UI element such as button, label, text field etc. Anything that you see is a view.</p>
+<h4 class="h4">Intent</h4>
+<p>Intent is used to invoke components. It is mainly used to:</p>
+<ul class="points">
+<li>Start the service</li>
+<li>Launch an activity</li>
+<li>Display a web page</li>
+<li>Display a list of contacts</li>
+<li>Broadcast a message</li>
+<li>Dial a phone call etc.</li>
+</ul>
+<p>For example, you may write the following code to view the webpage.</p>
+<ol class="dp-j" start="1">
+<li class="alt">Intent&nbsp;intent=<span class="keyword">new</span>&nbsp;Intent(Intent.ACTION_VIEW);&nbsp;&nbsp;</li>
+<li class="">intent.setData(Uri.parse(<span class="string">"http://www.javatpoint.com"</span>));&nbsp;&nbsp;</li>
+<li class="alt">startActivity(intent);&nbsp;&nbsp;</li>
+</ol>
+<p>-----------------------------------------------------------------------</p>
+<h4 class="h4">Service</h4>
+<p>Service is a background process that can run for a long time.</p>
+<p>There are two types of services local and remote. Local service is accessed from within the application whereas remote service is accessed remotely from other applications running on the same device.</p>
+<hr />
+<h4 class="h4">Content Provider</h4>
+<p>Content Providers are used to share data between the applications.</p>
+<hr />
+<h4 class="h4">Fragment</h4>
+<p>Fragments are like parts of activity. An activity can display one or more fragments on the screen at the same time.</p>
+<hr />
+<h4 class="h4">AndroidManifest.xml</h4>
+<p>It contains informations about activities, content providers, permissions etc. It is like the web.xml file in Java EE.</p>
+<hr />
+<h4 class="h4">Android Virtual Device (AVD)</h4>
+<p>It is used to test the android application without the need for mobile or tablet etc. It can be created in different configurations to emulate different types of real devices.</p>

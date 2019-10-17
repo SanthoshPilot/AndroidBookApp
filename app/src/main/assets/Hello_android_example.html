@@ -1,0 +1,61 @@
+<h3 class="h2">Hello Android Example</h3>
+<p>You need to follow the 3 steps mentioned above for creating the Hello android application.</p>
+<h3 class="h3">1) Create the New Android project</h3>
+<p>For creating the new android studio project:</p>
+<p>1) Select&nbsp;<em>Start a new Android Studio project</em></p>
+<p><img src="https://static.javatpoint.com/androidpages/images/helloworld1.png" alt="hello android example" /></p>
+<p>2) Provide the following information: Application name, Company domain, Project location and Package name of application and click next.</p>
+<p><img src="https://static.javatpoint.com/androidpages/images/helloworld2.png" alt="hello android example 2" width="624" height="444" /></p>
+<p>3) Select the API level of application and click next.</p>
+<p><img src="https://static.javatpoint.com/androidpages/images/helloworld3.png" alt="hello android example 3" width="562" height="400" /></p>
+<p>4) Select the Activity type (Empty Activity).</p>
+<p><img src="https://static.javatpoint.com/androidpages/images/helloworld4.png" alt="hello android example 4" width="559" height="398" /></p>
+<p>5) Provide the Activity Name and click finish.</p>
+<p><img src="https://static.javatpoint.com/androidpages/images/helloworld5.png" alt="hello android example 5" width="559" height="398" /></p>
+<p>After finishing the Activity configuration, Android Studio auto generates the activity class and other required configuration files.</p>
+<p>Now an android project has been created. You can explore the android project and see the simple program, it looks like this:</p>
+<p><img src="https://static.javatpoint.com/androidpages/images/helloworld6.png" alt="hello android example 5" width="634" height="272" /></p>
+<h3 class="h3">2) Write the message</h3>
+<p class="filename"><span style="color: #ff0000;">File: activity_main.xml</span></p>
+<p>Android studio auto generates code for activity_main.xml file. You may edit this file according to your requirement.</p>
+<ol class="dp-j" start="1">
+<li class="alt">&lt;?xml&nbsp;version=<span class="string">"1.0"</span>&nbsp;encoding=<span class="string">"utf-8"</span>?&gt;&nbsp;&nbsp;</li>
+<li class="">&lt;android.support.constraint.ConstraintLayout&nbsp;xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;xmlns:app=<span class="string">"http://schemas.android.com/apk/res-auto"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;xmlns:tools=<span class="string">"http://schemas.android.com/tools"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width=<span class="string">"match_parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height=<span class="string">"match_parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;tools:context=<span class="string">"first.javatpoint.com.welcome.MainActivity"</span>&gt;&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&lt;TextView&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width=<span class="string">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height=<span class="string">"wrap_content"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:text=<span class="string">"Hello&nbsp;Android!"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app:layout_constraintBottom_toBottomOf=<span class="string">"parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app:layout_constraintLeft_toLeftOf=<span class="string">"parent"</span>&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app:layout_constraintRight_toRightOf=<span class="string">"parent"</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app:layout_constraintTop_toTopOf=<span class="string">"parent"</span>&nbsp;/&gt;&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class="">&lt;/android.support.constraint.ConstraintLayout&gt;&nbsp;</li>
+</ol>
+<p><span style="color: #ff0000;">File: MainActivity.java</span>&nbsp;</p>
+<ol class="dp-j" start="1">
+<li class="alt"><span class="keyword">package</span>&nbsp;first.javatpoint.com.welcome;&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;</li>
+<li class="alt"><span class="keyword">import</span>&nbsp;android.support.v7.app.AppCompatActivity;&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">import</span>&nbsp;android.os.Bundle;&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;</li>
+<li class=""><span class="keyword">public</span>&nbsp;<span class="keyword">class</span>&nbsp;MainActivity&nbsp;<span class="keyword">extends</span>&nbsp;AppCompatActivity&nbsp;{&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">@Override</span>&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">protected</span>&nbsp;<span class="keyword">void</span>&nbsp;onCreate(Bundle&nbsp;savedInstanceState)&nbsp;{&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">super</span>.onCreate(savedInstanceState);&nbsp;&nbsp;</li>
+<li class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity_main);&nbsp;&nbsp;</li>
+<li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</li>
+<li class="">}&nbsp;&nbsp;</li>
+</ol>
+<h2 class="h3">3) Run the android application</h2>
+<p>To run the android application, click the run icon on the toolbar or simply press Shift + F10.</p>
+<p><img src="https://static.javatpoint.com/androidpages/images/helloworld7.png" alt="hello android example 7" /></p>
+<p>The android emulator might take 2 or 3 minutes to boot. So please have patience. After booting the emulator, the android studio installs the application and launches the activity. You will see something like this:</p>
+<p><img src="https://static.javatpoint.com/androidpages/images/helloworld8.png" alt="hello android example 8" /></p>
+<p>&nbsp;</p>
